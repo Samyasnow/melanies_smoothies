@@ -18,10 +18,13 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 # st.stop()
 
 # Convert DataFrame column to a list for multiselect
+pandas_df = my_dataframe.to_pandas()  # Convert to pandas DataFrame
 ingredients_list = st.multiselect(
     'Choose up to 5 ingredients:',
-    my_dataframe['FRUIT_NAME'].tolist(),
+    pandas_df['FRUIT_NAME'].tolist(),  # Now you can use .tolist()
     max_selections=5
+)
+
 )
 
 if ingredients_list:
