@@ -1,3 +1,3 @@
 # requirements.txt
 snowflake-snowpark-python
-streamlit.title(":cup_with_straw: Customize Your Smoothie!:cup_with_straw:")
+streamlit
